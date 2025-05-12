@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	<IsWindowsOS Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindowsOS>
 	<OutputType>Library</OutputType>
+	<TargetFrameworks>net8.0;net8.0-windows</TargetFrameworks>
   </PropertyGroup>
   <PropertyGroup Condition=" $(TargetFramework.EndsWith('windows')) ">
     <UseWPF>True</UseWPF>
